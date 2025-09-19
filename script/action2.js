@@ -30,9 +30,11 @@ gsap.timeline({
         scrub: true
     }
     }).to("#object1", 
-        {x:500, yPercent:80, scale:0.6, rotate:20},'aa')
+        {x:530, yPercent:80, scale:0.5, rotate:20},'aa')
         .to("#object2", 
-        {x:500, yPercent:80, scale:0.6, rotate:20},'aa');
+        {x:550, yPercent:75, scale:0.5, rotate:20},'aa')
+        .from(".info-container .photo img", {opacity:0, scale:50}
+    );
 
 gsap.timeline({
     scrollTrigger: {
@@ -42,10 +44,10 @@ gsap.timeline({
         scrub: true
     }
     }).to("#object1", 
-        {x:300, yPercent:170, scale:0.8, rotate:20},'dd'
+        {x:300, yPercent:150, scale:0.8, rotate:20},'dd'
     ).to("#object2", 
-        {x:500, yPercent:170, scale:0.8, rotate:20},'dd'
-    );;
+        {x:500, yPercent:150, scale:0.8, rotate:20},'dd'
+    )
 
 gsap.timeline({
     scrollTrigger: {
@@ -56,10 +58,10 @@ gsap.timeline({
         // pin:true
     }
     }).to("#object1", 
-        {x:0, yPercent:280, scale:0.6, rotate:60},'dd'
+        {x:-600, yPercent:240, scale:0.6, rotate:60},'dd'
     ).to("#object2", 
-        {x:0, yPercent:280, scale:0.6, rotate:60},'dd'
-    );;
+        {x:-600, yPercent:240, scale:0.6, rotate:60},'dd'
+    )
 
 gsap.timeline({
     scrollTrigger: {
@@ -73,7 +75,7 @@ gsap.timeline({
         {x:200, yPercent:370, scale:0.6, rotate:60},'dd'
     ).to("#object2", 
         {x:200, yPercent:330, scale:0.6, rotate:60},'dd'
-    );;
+    )
     
 gsap.timeline({
     scrollTrigger: {
@@ -84,9 +86,9 @@ gsap.timeline({
         // pin:true
     }
     }).to("#object1", 
-        {x:-50, yPercent:465, scale:0.4, rotate:40},'dd'
+        {x:-50, yPercent:430, scale:0.4, rotate:40},'dd'
     ).to("#object2", 
-        {x:-600, yPercent:440, scale:0.4, rotate:40},'dd'
+        {x:-600, yPercent:410, scale:0.4, rotate:40},'dd'
     );;
 
 
@@ -129,7 +131,7 @@ const banner = gsap.timeline();
             scrub: true,
             pin: ".banner h2",      // h2를 스크롤 동안 고정
             // anticipatePin: 1,
-            markers: true
+            // markers: true
         });
         ScrollTrigger.create({
             animation: banner,
@@ -139,7 +141,7 @@ const banner = gsap.timeline();
             scrub: true,
             pin: ".view",      // h2를 스크롤 동안 고정
             // anticipatePin: 1,
-            markers: true
+            // markers: true
         });
         gsap.utils.toArray(".banner .content ul li img").forEach(function(img) {
             ScrollTrigger.create({
@@ -189,5 +191,3 @@ const banner = gsap.timeline();
         //     }
         // });
 
-
-        
